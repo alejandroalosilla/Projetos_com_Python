@@ -20,6 +20,7 @@ def enviar_email():
     
     # Senha descartável que pode ser gerada na sua conta do gmail na aba "Senhas de App" (Apenas pesquisar por "Senhas de App" nas suas configurações de conta):
     # Exemplo de senha gerada -> hxnhegofnkkwlkmo
+    # (*Subistitua*)
     password = 'Senha descartável criada no gmail (Senhas de App)'
     msg.add_header('Content-Type', 'text/html')
     msg.set_payload(corpo_email)
