@@ -9,9 +9,11 @@ lista_arquivo = os.listdir("/content/drive/MyDrive/Curso Básico de Python/Vend
 
 # Passo 2 - Importar as bases de dados de vendas
 for arquivo in lista_arquivo:
+  # Se tem "Vendas" no nome do arquivo, então
+  if 'vendas' in arquivo.lower():
+    print(f"/content/drive/MyDrive/Curso Básico de Python/Vendas/{arquivo}")
   # Importar o arquivo
-  print(f"/content/drive/MyDrive/Curso Básico de Python/Vendas/{arquivo}")
-
+  
 # Passo 3 - Tratar / Compilar as bases de dados
 
 # Passo 4 - Calcular o produto mais vendido (em quantidade)
