@@ -1,7 +1,3 @@
-# Lógica de programação
-
-# Passo 0 - Entender o desafio que você quer resolver
-
 # Passo 1 - Percorrer todos os arquivos da pasta base de dados (Pasta Vendas)
 import os # Importar biblioteca os (Mecher com arquivos do PC)
 import pandas as pd # importando biblioteca pandas e apelidando como "pd" (Mecher com base de dados)
