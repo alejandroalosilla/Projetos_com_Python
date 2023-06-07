@@ -20,14 +20,14 @@ for arquivo in lista_arquivo:
 
 # Passo 3 - Tratar / Compilar as bases de dados
 print('Tabela Unificada: ')
-display(tabela_total)
+print(tabela_total)
 
 # Passo 4 - Calcular o produto mais vendido (em quantidade)
 if 'Produto' in tabela_total.columns:
   tabela_produtos = tabela_total.groupby('Produto')['Quantidade Vendida'].sum().reset_index() # Agrupando os elementos da tabela com base na coluna "Produto" e somando as quantidades
   tabela_produtos = tabela_produtos.sort_values('Quantidade Vendida', ascending=False)
   print('\nCalcular o produto mais vendido:')
-  display(tabela_produtos)
+  print(tabela_produtos)
 else:
   print("A coluna 'Produto' não existe na tabela.")
 
@@ -36,12 +36,12 @@ tabela_total['Faturamento'] = tabela_total['Quantidade Vendida'] * tabela_total[
 tabela_faturamento = tabela_total.groupby('Produto')['Faturamento'].sum().reset_index()
 tabela_faturamento = tabela_faturamento.sort_values('Faturamento', ascending=False)
 print('\nCalcular o produto que mais faturou: ')
-display(tabela_faturamento)
+print(tabela_faturamento)
 # Passo 6 - Calcular a loja / cidade que mais vendeu (em faturamento)
 tabela_lojas = tabela_total.groupby('Loja')['Faturamento'].sum().reset_index()
 tabela_lojas = tabela_lojas.sort_values('Faturamento', ascending=False)
 print('\nLoja que mais vendeu: ')
-display(tabela_lojas)
+print(tabela_lojas)
 
 # Passo 7 - Criar um gráfico/dashboard
 
